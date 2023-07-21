@@ -51,7 +51,7 @@ form.addEventListener('submit', function (event) {
   const formData = new FormData(form);
 
   // Отправляем данные на сервер
-  fetch('mail.php', {
+  fetch('https://course-front-six.vercel.app/mail.php', {
     method: 'POST',
     body: formData,
   })
