@@ -43,43 +43,45 @@ emailInput.addEventListener('input', (e) => {
 const nameInput = document.querySelector('#name');
 const myForm = document.getElementById('form');
 
-myForm.addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formData = new FormData(myForm);
+// myForm.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//   const formData = new FormData(myForm);
+//   console.log(formData);
 
-  fetch('https://course-front-six.vercel.app/mail.php', {
-    method: 'POST',
-    body: formData,
-  })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
-
-// const formElement = document.getElementById('form');
-// formElement.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   let data = {
-//     name: nameInput.value,
-//     phone: input.value,
-//     email: emailInput.value,
-//   };
-
-//   let response = fetch('mail.php', {
+//   fetch('https://course-front-six.vercel.app/mail.php', {
 //     method: 'POST',
-//     body: JSON.stringify(data),
-//     headers: {
-//       'Content-Type': 'application/json; charset=UTF-8',
-//     },
-//   });
-
+//     body: formData,
+//   })
+//     .then((response) => {
+//       console.log(response);
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
 // });
 
-//   alert(result);
+const formElement = document.getElementById('form');
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let data = {
+    name: nameInput.value,
+    phone: input.value,
+    email: emailInput.value,
+  };
+  console.log(data);
+
+  let response = fetch('/mail.php', {
+    method: 'POST',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+  });
+  let result = response.text();
+  alert(result);
+});
+
 //   // const phone = input.value;
 //   // const name =  nameInput.value;
 //   // const email = emailInput.value;
-//   // console.log(name, phone, email);let result = response.text();
+//   // console.log(name, phone, email);
