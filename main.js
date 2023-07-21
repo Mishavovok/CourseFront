@@ -53,7 +53,9 @@ form.addEventListener('submit', function (event) {
     body: formData,
   })
     .then((response) => {
-      console.log(response);
+      for (let entry of response.headers.entries()) {
+        console.log(entry);
+      }
     })
     .catch((error) => {
       console.error(error);
