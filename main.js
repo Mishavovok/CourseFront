@@ -61,6 +61,7 @@ const myForm = document.getElementById('form');
 // });
 
 const formElement = document.getElementById('form');
+
 formElement.addEventListener('submit', (e) => {
   e.preventDefault();
   let data = {
@@ -70,7 +71,7 @@ formElement.addEventListener('submit', (e) => {
   };
   console.log(data);
 
-  let response = fetch('/mail.php', {
+  let response = fetch('https://course-front-six.vercel.app/mail.php', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
