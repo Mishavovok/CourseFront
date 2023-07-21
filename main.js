@@ -45,11 +45,11 @@ const myForm = document.getElementById('form');
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  const formData = new FormData(form);
+  const formData = new FormData(orm);
   console.log(formData);
 
   fetch('https://course-front-six.vercel.app/mail.php', {
-    method: 'POST',
+    method: 'getSetCookie',
     body: formData,
   })
     .then((response) => {
