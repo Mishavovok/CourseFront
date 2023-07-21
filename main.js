@@ -43,47 +43,20 @@ emailInput.addEventListener('input', (e) => {
 const nameInput = document.querySelector('#name');
 const myForm = document.getElementById('form');
 
-// myForm.addEventListener('submit', function (event) {
-//   event.preventDefault();
-//   const formData = new FormData(myForm);
-//   console.log(formData);
-
-//   fetch('https://course-front-six.vercel.app/mail.php', {
-//     method: 'POST',
-//     body: formData,
-//   })
-//     .then((response) => {
-//       console.log(response);
-//     })
-//     .catch((error) => {
-//       console.error(error);
-//     });
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   const name = nameInput.value;
+//   const phone = input.value;
+//   const email = emailInput.value;
+//   const body = 'name' + name + '<br/> phone: ' + phone + '<br/> email ' + email;
+//   Email.send({
+//     Host: 'smtp.gmail.com',
+//     Username: 'misavovk878@gmail.com',
+//     Password: 'rowiblsgydgdsqdv',
+//     To: 'misavovk878@gmail.com',
+//     From: email,
+//     Subject: '',
+//     Body: body,
+//   }).then((message) => alert(message));
 // });
-
-const formElement = document.getElementById('form');
-
-formElement.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let data = {
-    name: nameInput.value,
-    phone: input.value,
-    email: emailInput.value,
-  };
-  console.log(data);
-
-  let response = fetch('/mail.php', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-  });
-  console.log(JSON.stringify(data));
-  let result = response.text();
-  alert(result);
-});
-
-//   // const phone = input.value;
-//   // const name =  nameInput.value;
-//   // const email = emailInput.value;
-//   // console.log(name, phone, email);

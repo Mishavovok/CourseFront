@@ -18,7 +18,6 @@ $title = 'Заявка с сайта'; // Название письма
 $body = '<p>Имя и Фамилия: <strong>'.$name.'</strong></p>'.
         '<p>Телефон: <strong>'.$phone.'</strong></p>'.
         '<p>Email: <strong>'.$email.'</strong></p>';
-
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
