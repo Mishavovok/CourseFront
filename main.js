@@ -49,7 +49,7 @@ form.addEventListener('submit', function (event) {
   console.log(formData);
 
   fetch('https://course-front-six.vercel.app/mail.php', {
-    method: 'POST',
+    method: 'get',
     body: formData,
   })
     .then((response) => {
