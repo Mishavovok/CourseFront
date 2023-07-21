@@ -41,26 +41,51 @@ emailInput.addEventListener('input', (e) => {
   }
 });
 const nameInput = document.querySelector('#name');
-const formElement = document.getElementById('form');
-formElement.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let data = {
-    name: nameInput.value,
-    phone: input.value,
-    email: emailInput.value,
-  };
-  let response = fetch('mail.php', {
-    method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-  });
-  let result = response.text();
+const myForm = document.getElementById('form');
 
-  alert(result);
-  // const phone = input.value;
-  // const name =  nameInput.value;
-  // const email = emailInput.value;
-  // console.log(name, phone, email);
+form.addEventListener('submit', function (event) {
+  // Отменяем стандартное поведение формы
+  event.preventDefault();
+
+  // Получаем данные из формы
+  const formData = new FormData(form);
+
+  // Отправляем данные на сервер
+  fetch('mail.php', {
+    method: 'POST',
+    body: formData,
+  })
+    .then((response) => {
+      // Обрабатываем ответ от сервера
+      console.log(response);
+    })
+    .catch((error) => {
+      // Обрабатываем ошибку
+      console.error(error);
+    });
 });
+
+// const formElement = document.getElementById('form');
+// formElement.addEventListener('submit', (e) => {
+//   e.preventDefault();
+//   let data = {
+//     name: nameInput.value,
+//     phone: input.value,
+//     email: emailInput.value,
+//   };
+
+//   let response = fetch('mail.php', {
+//     method: 'POST',
+//     body: JSON.stringify(data),
+//     headers: {
+//       'Content-Type': 'application/json; charset=UTF-8',
+//     },
+//   });
+
+// });
+
+//   alert(result);
+//   // const phone = input.value;
+//   // const name =  nameInput.value;
+//   // const email = emailInput.value;
+//   // console.log(name, phone, email);let result = response.text();
