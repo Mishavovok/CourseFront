@@ -43,24 +43,45 @@ emailInput.addEventListener('input', (e) => {
 const nameInput = document.querySelector('#name');
 const myForm = document.getElementById('form');
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formData = new FormData(form);
-  console.log(formData);
+// myForm.addEventListener('submit', function (event) {
+//   event.preventDefault();
+//   const formData = new FormData(myForm);
+//   console.log(formData);
 
-  fetch('https://course-front-six.vercel.app/mail.php', {
-    method: 'POST',
-    body: formData,
-  })
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+//   fetch('https://course-front-six.vercel.app/mail.php', {
+//     method: 'POST',
+//     body: formData,
+//   })
+//     .then((response) => {
+//       console.log(response);
+//     })
+//     .catch((error) => {
+//       console.error(error);
+//     });
+// });
+
+const formElement = document.getElementById('form');
+
+formElement.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let data = {
+    name: nameInput.value,
+    phone: input.value,
+    email: emailInput.value,
+  };
+  console.log(data);
+
+  let response = fetch('/mail.php', {
+    method: 'PO',
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json; charset=UTF-8',
+    },
+  });
+  console.log(JSON.stringify(data));
+  let result = response.text();
+  alert(result);
 });
-
-// const formElement = document.getElementById('form');
 
 //   // const phone = input.value;
 //   // const name =  nameInput.value;
