@@ -72,7 +72,7 @@ formElement.addEventListener('submit', (e) => {
   console.log(data);
 
   let response = fetch('/mail.php', {
-    method: 'PO',
+    method: 'POST',
     body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
