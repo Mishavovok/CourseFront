@@ -43,9 +43,9 @@ emailInput.addEventListener('input', (e) => {
 const nameInput = document.querySelector('#name');
 const myForm = document.getElementById('form');
 
-form.addEventListener('submit', function (event) {
+myForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  const formData = new FormData(form);
+  const formData = new FormData(myForm);
 
   fetch('https://course-front-six.vercel.app/mail.php', {
     method: 'POST',
