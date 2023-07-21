@@ -45,7 +45,7 @@ const myForm = document.getElementById('form');
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
-  const formData = new FormData(orm);
+  const formData = new FormData(form);
   console.log(formData);
 
   fetch('https://course-front-six.vercel.app/mail.php', {
