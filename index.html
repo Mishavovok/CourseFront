@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+    <title>RGB</title>
+  </head>
+  <body>
+    <section class="bgcolor">
+      <div class="bgcolor__left"></div>
+      <div class="bgcolor__right"></div>
+      <header class="header">
+        <div class="containers">
+          <nav class="nav">
+            <div class="nav__logo">
+              <img class="nav__logo-img" src="img/Shape.png" alt="" />
+              <h1 class="logo__title">POWERCODE <span class="logo__text">ACADEMY</span></h1>
+            </div>
+            <div class="nav__data">
+              <div class="nav__data-item">
+                <img class="nav__data-item-img" src="img/calendar_today.png" alt="" />
+                <p class="nav__data-item-text">28 декабря</p>
+              </div>
+              <div class="nav__data-item">
+                <img class="nav__data-item-img" src="img/gg_time.png" alt="" />
+                <p class="nav__data-item-text">3,5 часа</p>
+              </div>
+            </div>
+          </nav>
+          <section class="info">
+            <div class="container">
+              <div class="info__item-front">
+                <div class="info__item-webinar">
+                  <img class="info__item-webinar-img" src="img/globus.png" alt="" />
+                  <p class="info__item-webinar-text">Вебинар</p>
+                </div>
+                <h1 class="info__item-title">front-end</h1>
+                <p class="info__item-text">
+                  <span class="info__item-textbg">с нуля</span> легкий старт в IT профессии
+                </p>
+                <p class="info__item-skills">
+                  Узнайте какими
+                  <span class="info__item-skills-fotn">
+                    навыками должен обладать фронтенд разработчик в 2022</span
+                  >
+                  году и как начать карьеру в востребованной профессии
+                </p>
+              </div>
+              <div class="info__teacher">
+                <div class="info__item-teacher">
+                  <img class="info__item-teacher-img" src="img/teacher.png" alt="" />
+                  <div class="info__item-teacher-info">
+                    <h1 class="info__item-teacher-title">
+                      Кирилл <span class="info__item-teacher-title-color">КАСАТОНОВ</span>
+                    </h1>
+                    <p class="info__item-teacher-text">
+                      6 лет коммерческого опыта с такими компаниями как Mercedes-Benz и другими
+                      крупными корпорациями
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="info__present">
+                <div class="info__item-present">
+                  <img class="info__item-present-img" src="img/present.png" alt="" />
+                  <div class="info__item-present-info">
+                    <h1 class="info__item-present-title">Бонус за регистрацию</h1>
+                    <p class="info__item-present-text">
+                      PDF-файл "5 преимуществ профессии фронтенд разработчика"
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="info__item-form">
+                <div class="info__form">
+                  <h1 class="info__form-title">
+                    Запишитесь <span class="info__form-title-color">бесплатно</span>
+                  </h1>
+                  <h1 class="info__form-text">и получите подарок</h1>
+                  <form action="" id="form">
+                    <div class="form__item">
+                      <input
+                        class="form__input name"
+                        placeholder=" Ваше имя и фамилия"
+                        type="name"
+                        id="name"
+                      />
+                      <div class="form__number">
+                        <span id="valid-msg" class="hide"></span>
+                        <span id="error-msg" class="hidel"></span>
+                        <input
+                          class="form__input"
+                          placeholder="Ваш номер телефона"
+                          type="tel"
+                          id="phone"
+                        />
+                      </div>
+
+                      <span id="result" class="hidel"></span>
+                      <input
+                        class="form__input email"
+                        placeholder="Ваш email"
+                        type="email"
+                        id="email"
+                      />
+                      <button type="submit" class="form__btn">Записаться бесплатно</button>
+                      <a class="form__privacy" href="">
+                        Нажимая на кнопку я согашаюсь с политикой конфидециальности
+                      </a>
+                    </div>
+                  </form>
+                  <div class="info__form-icon">
+                    <img class="info__form-html" src="img/HTML5_logo.png" alt="" />
+                    <img class="info__form-css" src="img/CSS3_logo.png" alt="" />
+                    <img class="info__form-javascript" src="img/javascript.png" alt="" />
+                    <img class="info__form-sublime" src="img/sublime-text 1.png" alt="" />
+                    <img class="info__form-visual" src="img/Visual_Studio_Code_icon.png" alt="" />
+                    <span class="info__form-html-bg"></span>
+                    <span class="info__form-css-bg"></span>
+                    <span class="info__form-javascript-bg"></span>
+                    <span class="info__form-sublime-bg"></span>
+                    <span class="info__form-visual-bg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </header>
+    </section>
+    <script>
+      const input = document.querySelector('#phone');
+      window.intlTelInput(input, {
+        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js',
+      });
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
