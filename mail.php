@@ -7,6 +7,7 @@ require 'phpmailer/Exception.php';
 // Получение данных
 $json = file_get_contents('php://input'); // Получение json строки
 $data = json_decode($json, true); // Преобразование json
+$post_values = [];
 
 // Данные
 $name = $data['name'];
