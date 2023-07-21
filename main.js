@@ -44,28 +44,17 @@ const nameInput = document.querySelector('#name');
 const myForm = document.getElementById('form');
 
 form.addEventListener('submit', function (event) {
-  // Отменяем стандартное поведение формы
   event.preventDefault();
-
-  // Получаем данные из формы
   const formData = new FormData(form);
-  // let data = {
-  //   name: nameInput.value,
-  //   phone: input.value,
-  //   email: emailInput.value,
-  // };
 
-  // Отправляем данные на сервер
   fetch('https://course-front-six.vercel.app/mail.php', {
     method: 'POST',
     body: formData,
   })
     .then((response) => {
-      // Обрабатываем ответ от сервера
       console.log(response);
     })
     .catch((error) => {
-      // Обрабатываем ошибку
       console.error(error);
     });
 });
