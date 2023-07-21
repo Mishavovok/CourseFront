@@ -71,8 +71,8 @@ formElement.addEventListener('submit', (e) => {
   };
   console.log(data);
 
-  let response = fetch('https://mail.php/course-front-six.vercel.app/', {
-    method: 'POST',
+  let response = fetch('/mail.php', {
+    method: 'GET',
     body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json; charset=UTF-8',
