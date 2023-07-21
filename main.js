@@ -49,16 +49,16 @@ form.addEventListener('submit', function (event) {
 
   // Получаем данные из формы
   const formData = new FormData(form);
-  let data = {
-    name: nameInput.value,
-    phone: input.value,
-    email: emailInput.value,
-  };
+  // let data = {
+  //   name: nameInput.value,
+  //   phone: input.value,
+  //   email: emailInput.value,
+  // };
 
   // Отправляем данные на сервер
   fetch('https://course-front-six.vercel.app/mail.php', {
     method: 'POST',
-    body: data,
+    body: formData,
   })
     .then((response) => {
       // Обрабатываем ответ от сервера
